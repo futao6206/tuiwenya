@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>小说后台</title>
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/app.css" />
+    <script type="text/javascript" src="/Public/Admin/js/app.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!-- START HEADER -->
+    {%include file='../Public/header.html'%}
+    <!-- END HEADER -->
+
+    <!-- START MAIN -->
+    <div id="main">
+        <!-- START SIDEBAR -->
+        {%include file="../Public/sidebar.html"%}
+        <!-- END SIDEBAR -->
+        <!-- END SIDEBAR -->
+
+        <!-- START PAGE -->
+        <div id="page">
+            <!-- start page title -->
+            <div class="page-title">
+                <div class="in">
+                    <div class="titlebar">	<h2>小说管理</h2>	<p>编辑小说</p></div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- START CONTENT -->
+            <div class="content">
+                <div class="simplebox grid740" style="z-index: 720;">
+                    <div class="titleh" style="z-index: 710;">
+                        <h3>编辑小说</h3>
+                    </div>
+                    <div class="body" style="z-index: 690;">
+
+                        <form id="form2" name="form2" method="post" action="?c=novel&a=update&id={%$novel.id%}">
+                            <div class="st-form-line" style="z-index: 680;">
+                                <span class="st-labeltext">标题</span>
+                                <input name="title" type="text" class="st-forminput" style="width:33%" value="{%$novel.title%}">
+                                <div class="clear" style="z-index: 670;"></div>
+                            </div>
+                            <div class="st-form-line" style="z-index: 680;">
+                                <span class="st-labeltext">作者</span>
+                                <input name="author" type="text" class="st-forminput" style="width:33%" value="{%$novel.author%}">
+                                <div class="clear" style="z-index: 670;"></div>
+                            </div>
+                            <div class="st-form-line" style="z-index: 620;">
+                                <span class="st-labeltext">状态</span>
+                                <label class="margin-right10">
+                                    <div class="radio">
+                                        {%if $novel.isComplete%}
+                                        <span><input type="radio" name="isComplete" class="uniform" value="1" checked></span>
+                                        {%else%}
+                                        <span><input type="radio" name="isComplete" class="uniform" value="1"></span>
+                                        {%/if%}
+                                    </div> 已完结
+                                </label>
+                                <label class="margin-right10">
+                                    <div class="radio">
+                                        {%if $novel.isComplete%}
+                                        <span><input type="radio" name="isComplete" class="uniform" value="0"></span>
+                                        {%else%}
+                                        <span><input type="radio" name="isComplete" class="uniform" value="0" checked></span>
+                                        {%/if%}
+                                    </div> 连载中
+                                </label>
+                                <div class="clear" style="z-index: 610;"></div>
+                            </div>
+                            <div class="simplebox grid740">
+                                <div class="titleh">
+                                    <h3>简介</h3>
+                                </div>
+                                <div class="body">
+                                    <textarea class="st-forminput" rows="5" cols="47" name="introduce" style="width:96.5%;">{%$novel.introduce%}</textarea>
+                                </div>
+
+                            </div>
+                            <div class="button-box" style="z-index: 460;">
+                                <input type="submit" id="button" value="提交" class="st-button">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END PAGE -->
+        <div class="clear"></div>
+    </div>
+    <!-- END MAIN -->
+
+    <!-- START FOOTER -->
+    {%include file="../Public/footer.html"%}
+    <!-- END FOOTER -->
+</div>
+</body>
+</html>

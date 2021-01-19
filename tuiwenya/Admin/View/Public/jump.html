@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jump</title>
+</head>
+<body>
+<p>
+    操作提示:{%$message%}，系统将在<span id="time">{%$time%}</span>秒后跳转！，如果不想等待，请点击
+    <a target="main" class="a1" href="{%$url%}">这里</a>
+    跳转。
+</p>
+</body>
+</html>
+<script language="javascript">
+    function playSec(num) {
+        time.innerHTML = num;
+        if (--num > 0) {
+            setTimeout("playSec("+num+")",1000);
+        } else {
+            location.href = "{%$url%}";
+        }
+    }
+    playSec({%$time%});
+</script>

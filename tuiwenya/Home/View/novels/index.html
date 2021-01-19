@@ -1,0 +1,62 @@
+{%extends file="novels/main.html"%}
+
+{%block name="header"%}
+<title>推文鸭</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" href="/Public/Home/novels/css/index.css">
+<script>
+    function clear() {
+        var q = document.getElementById("q");
+        var btn = document.getElementById("d");
+        btn.style.display = "none";
+        q.value = "";
+        q.focus();
+    }
+
+    function on_input(e) {
+        var btn = document.getElementById("d");
+        var q = document.getElementById("q");
+        if (q.value == "") {
+            btn.style.display = "none";
+        } else {
+            btn.style.display = "inline";
+        }
+    }
+</script>
+{%/block%}
+
+{%block name="content"%}
+<div class="search-page">
+    <div class="search-container">
+        <div class="logo">
+            <img class="img-responsive center-block" src="/Public/Home/novels/img/logo_home.png" alt="tuiwenya">
+        </div>
+        <form method="GET" action="" class="search_form" id="search_form" role="search">
+            <div class="clearfix" style="padding-bottom: 15px;">
+                <div class="col-xs-12">
+                    <div class="input-group search-container nofull">
+                        <input type="search" name="kw" class="form-control" id="q" placeholder="Search for..."
+                               autocomplete="off" value="" oninput="on_input(event)" onporpertychange="on_input(event)">
+                        <a href="javascript:clear();" class="delete" id="d" style="display: none">x</a>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn">Start search</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="indexNavBlock">
+            <div class="hot border-shadow" style="display: block;"><span class="blockTitleShadow">近期推文</span>
+                <span class="blockTitle">近期推文</span>
+                <ul>
+                    {%foreach $recommends as $recommend%}
+                    <a href="{%$recommend.url%}" target="_blank">
+                        <li>{%$recommend.title%}</li>
+                    </a>
+                    {%/foreach%}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{%/block%}

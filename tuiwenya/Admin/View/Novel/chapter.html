@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>小说后台</title>
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/app.css" />
+    <script type="text/javascript" src="/Public/Admin/js/app.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!-- START HEADER -->
+
+    {%include file='../Public/header.html'%}
+    <!-- END HEADER -->
+
+    <!-- START MAIN -->
+    <div id="main">
+        <!-- START SIDEBAR -->
+        {%include file="../Public/sidebar.html"%}
+        <!-- END SIDEBAR -->
+
+        <!-- START PAGE -->
+        <div id="page">
+            <!-- start page title -->
+            <div class="page-title">
+                <div class="in">
+                    <div class="titlebar">	<h2>小说管理</h2>	<p>章节列表</p></div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- START CONTENT -->
+            <div class="content">
+                <!-- START TABLE -->
+                <div class="simplebox grid740">
+
+                    <div class="titleh">
+                        <h3>章节列表</h3>
+                    </div>
+
+                    <table id="myTable" class="tablesorter">
+                        <thead>
+                        <tr>
+                            <th>novel_id</th>
+                            <th>chapter_id</th>
+                            <th>order_index</th>
+                            <th>chapter_title</th>
+                            <th>source</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {%foreach $chapters as $chapter%}
+                        <tr>
+                            <td>{%$chapter.novel_id%}</td>
+                            <td>{%$chapter.id%}</td>
+                            <td>{%$chapter.order_index%}</td>
+                            <td>
+                                <a href="?c=novel&a=content&ch={%$chapter.id%}">{%$chapter.title%}</a>
+                            </td>
+                            <td>{%$chapter.source%}</td>
+                        </tr>
+                        {%/foreach%}
+                        </tbody>
+                    </table>
+                    <ul class="pagination">
+                        {%$pageStr%}
+                    </ul>
+                </div>
+                <!-- END TABLE -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END PAGE -->
+        <div class="clear"></div>
+    </div>
+    <!-- END MAIN -->
+
+    <!-- START FOOTER -->
+    {%include file="../Public/footer.html"%}
+    <!-- END FOOTER -->
+</div>
+</body>
+</html>
+

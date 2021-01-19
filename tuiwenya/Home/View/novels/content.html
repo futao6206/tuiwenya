@@ -1,0 +1,84 @@
+{%extends file="novels/main.html"%}
+
+{%block name="header"%}
+<title>{%$name%} - tuiwenya</title>
+<link rel="stylesheet" href="/Public/Home/novels/css/content.css">
+<style>
+    #yun-tie-sdk-wrap {
+        background-color: #f8f3e9 !important;
+        margin-top: 20px;
+    }
+</style>
+<script type="text/javascript">
+    function click() {
+        alert("功能开发中...");
+    }
+</script>
+
+{%/block%}
+
+{%block name="content"%}
+
+<div class="container all-content">
+    <div class="title">
+        <h2 id="content_name">{%$chapter.title%}</h2>
+    </div>
+    <div class="left-bar-list">
+        <div class="left-bar-flag">
+            <a href="?c=chapter&n={%$chapter.novel_id%}&name={%$name%}">
+                <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                <div>目录</div>
+            </a>
+        </div>
+        <div class="left-bar-flag">
+            <a href="">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                <div>设置</div>
+            </a>
+        </div>
+        <div class="left-bar-flag">
+            <a id="tuiwenya_book" href="javascript:click();">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                <div>书架</div>
+            </a>
+        </div>
+        <div class="left-bar-flag">
+            <a href="javascript:click();">
+                <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                <div>书单</div>
+            </a>
+        </div>
+    </div>
+    <div class="show-content">
+        <div class="content">
+            {%$content.content%}
+        </div>
+    </div>
+    <div class="pre_next">
+        {%if !empty($pre_chapter_url)%}
+        <a href="{%$pre_chapter_url%}" class="btn btn-default">上一章</a>
+        {%else%}
+        <a href="{%$cur_chapter_url%}" class="btn btn-default">上一章</a>
+        {%/if%}
+        {%if !empty($next_chapter_url)%}
+        <a href="{%$next_chapter_url%}" class="btn btn-default">下一章</a>
+        {%else%}
+        <a href="{%$cur_chapter_url%}" class="btn btn-default">下一章</a>
+        {%/if%}
+    </div>
+    <div class="move">
+        <div class="move_up">
+            <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+        </div>
+        <div class="move_down">
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+        </div>
+    </div>
+</div>
+{%/block%}
+{%block name="script"%}
+<script src="/Public/Home/novels/js/theme.js"></script>
+<script src="/Public/Home/novels/js/content.js"></script>
+{%/block%}
+
+

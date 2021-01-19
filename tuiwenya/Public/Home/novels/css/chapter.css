@@ -1,0 +1,296 @@
+body {
+    background-color: #E5E4DB !important
+}
+
+.all-chapter {
+    margin-bottom: 50px;
+}
+
+#chapterlist .lm, .ablum_read, .TabCss .p10, .TabCss .h10, div.mb_21b, .booktext li center a, #ClassTitle, .bookurl, .booklist .vt, #bookname, #ad01, .shucansu, .samewriter, .bd > span, .bdsub > dl > dt, .all_ad, li.volume, #list > .notice, .cover, #new_chapter, .con_top, #sidebar, #fmimg, .tjlist, #listtj, #intro > p:last-child, #intro, .star_title, .starlist {
+    display: none !important;
+}
+
+.mulu h1, .readout h1, #maininfo, .bdsub dd h1 {
+    background: #F6F4EC;
+    border-radius: 15px;
+    margin-top: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: 25px;
+}
+
+.mulu h1, .readout h1 {
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+}
+
+.bdsub dd h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#info h1 {
+    text-align: center;
+    padding-top: 20px;
+    color: rgba(50, 68, 84, 0.61);
+}
+
+#info p {
+    float: left;
+    margin-top: 25px;
+    width: 40%;
+    margin-left: 6%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 区域1 */
+.chapters, .listmain, .story_list_m62topxs, .directory_con, .book-list, #yuedu table, .leftList, table.css, .dirconone, .book_list, #readerlist, .liebiao_bottom dl, .insert_list dl, .uclist, .list_box, .chapter, .mulu, #chapterslist, .booktext, #chapterslist dl, .box_chap, #book dl, .centent, #chapterlist, .booklist, #at, table.border, .zjlist, .mulu_list, .acss, .list, #xslist ul, .dirlist, .list-chapter, .list_box ul, #defaulthtml4 table, .article-list > dl, .update, #list .box, .bookcontent > dl, .listmain > dl, .ml_main > dl, #list dl, #chapter_list, .chapterlist, .mt10, .catalog, #readerlists, .readout table {
+    overflow: hidden;
+    padding-bottom: 1px;
+    margin: auto;
+    background: #F6F4EC;
+    margin-top: 5px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+table.border, .mulu_list, #list, .article-list {
+    margin-top: 35px;
+}
+
+/* 区域2 */
+.ml_list h3, .story-catalog h3.catalog-title, .listmain dl dt, .list .topfill h1, .story_list_m62topxs h2, .directory_con .tit, #yuedu table tr th, table.css td.vcss, .book_list h5, #main, .jm h3, #chapterlist .ui-title h3, #readerlist .topa, .insert_list dt, .uclist dt, .list_box td.list_line, .chapter .name, .mulu .mulu-title, #list dl dt h2, #chapterslist dt, .box_chap .t, .centent .list, .booklist .v, table.border .M, .zjlist dt, td.tcss, .acss .vcss, .list .tit, #xslist ul span, .article-list > dl > dt, .update .hd > #list .box-head, .bookcontent dt, .listmain dt, .bdsub tr th, #readerlists > ul > h3, #cl_content > dl > dt, #list dt, .panel > h2, .TabCss dt, .chapterlist > dt, .vcss, .readout td.vcss .chapter_list_chapter_title, .mt10 > .title > h2 {
+    background: none repeat scroll 0 0 rgba(214, 212, 200, 0.89) !important;
+    display: inline !important;
+    float: left !important;
+    font-size: 14px !important;
+    line-height: 28px !important;
+    overflow: hidden !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    width: 100% !important;
+    margin: auto auto 5px !important;
+    padding: 5px 10px !important;
+}
+
+table.css {
+    width: 100%;
+}
+
+/* 区域3 */
+.ml_list ul li, ul.chaw_c li, .mod-article-list li, .chapter, .story-catalog .catalog-list ul li, #chapter_list .chapter_list_chapterx, .listmain dl dd, .list .block_ul li, .story_list_m62topxs li, .directory_con .con li, .book-list li, #yuedu table tr li, .leftList li, table.css td.ccss, .dirconone ul li, .boxm ul li, .zjlist4 li, ul.pox li, .dccss, #readerlist ul li, .liebiao_bottom dd, .insert_list li, .uclist dd, .list_box td.list_lineb, .chapter li, #category .content .combox h2, .mulu li, .booktext li, #chapterslist dd, .book li, .art_listmain_main span, .box_chap li, #dirsort01 li, #book dd, .centent li, #chapterlist li, .booklist span, .box .zjlist4 li, .chapterlist li, #at td, .readout td, .zjlist dd, .mulu_list > li, .acss .ccss, .list .zl, #xslist ul li, .dirlist li, .list-chapter > li, .list_box ul li, #defaulthtml4 table .dccss, #defaulthtml4 table .dccss a, .article-list > dl > dd, .update .bd, #list td.swbt, .bookcontent dd, .listmain dd, .L, .ml_main > dl > dd, #readerlists > ul > li, .catalog > ul > li, .article_texttitleb > ul > li, #cl_content > dl > dd, #list dd, .panel li, .chapterlist > dd, td.ccss, .chapter_list_chapter, .book_list > ul > li {
+    border-bottom: 1px dashed #CCC;
+    display: inline;
+    float: left;
+    height: 25px;
+    line-height: 200%;
+    margin-bottom: 5px;
+    text-align: left;
+    text-indent: 10px;
+    vertical-align: middle;
+    width: 26%;
+    font-size: 15px !important;
+    margin-left: 5% !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.TabCss dd.col4 {
+    float: right;
+    margin-right: 4px;
+}
+
+.TabCss dd {
+    width: 228px !important;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    text-indent: 10px;
+    font-size: 12px;
+    background: #E7F4F4;
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    float: left;
+    display: inline;
+    border: 1px solid #9FBFE2;
+    overflow: hidden;
+}
+
+dd > a {
+    cursor: pointer;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #E5E4DB !important;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+tr > td.ccss, .L, ul#chapterlist li, .list_box td.list_lineb {
+    width: 19% !important;
+}
+
+#at td.L {
+    width: 14% !important;
+}
+
+.download-area, .list .part01, .list .part02, .list .topfill .right_juan, .pinglun, #main .kl, div#comment, #dirsort01 li strong, .notice, .zuixin10, .update h2, .bdsub dd h3, .bdsub .tags, .bdsub .tips {
+    display: none !important;
+}
+
+.book_list > ul > li {
+    width: 20% !important;
+    float: right !important;
+}
+
+.boxm ul li {
+    float: left !important;
+    width: 25% !important;
+}
+
+#defaulthtml4 table .dccss {
+    width: 100% !important;
+}
+
+/*章节分页样式*/
+.pagebg {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+.pagebtn {
+    display: inline-block;
+    padding: 6px 3.2%;
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.page_pre {
+    margin-right: 5px;
+    margin-left: 0px;
+}
+.page_next {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+.page_center {
+    min-width: 50%;
+}
+@media (min-width: 375px) {
+    .page_center {
+        min-width: 55%;
+    }
+}
+html, body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0
+}
+
+.ptm-alert-shade {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 199;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+.pt-dir-sel {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    z-index: 200;
+    width: 80%;
+    padding: 15px 15px 0;
+    background-color: #fff;
+    -webkit-transform: translateY(-50%);
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-repeat: repeat-x;
+    background-size: 100% 1px;
+    background-position: left bottom;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e6e6e6))
+}
+
+.pt-dir-sel ul {
+    margin-top: 15px;
+    height: 308px;
+    overflow-y: scroll
+}
+
+.pt-dir-sel ul li {
+    height: 44px;
+    line-height: 44px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    background-repeat: repeat-x;
+    background-size: 100% 1px;
+    background-position: left bottom;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e6e6e6))
+}
+
+.pt-dir-sel ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%
+}
+.pt-dir-sel ul li.active, .pt-dir-sel ul li.active a {
+    color: #1abc9c
+}
+.pt-dir-sel ul li.active:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 22px;
+    height: 44px;
+    font-family: "ptmicon" !important;
+    content: '\2713';
+}
+
+.pt-dir-sel .title {
+    color: #333;
+    font-size: 16px;
+    padding: 0
+}
+/*章节分页样式*/
+
+
+@media (max-width: 960px) {
+    li.chapter, .list_box td.list_lineb, .chapter li, #category .content .combox h2, .mulu li, .booktext li, #chapterslist dd, .book li, .art_listmain_main span, .box_chap li, #dirsort01 li, #book dd, .centent li, #chapterlist li, .booklist span, .box .zjlist4 li, .chapterlist li, #at td, .readout td, .zjlist dd, .mulu_list > li, .acss .ccss, .list .zl, #xslist ul li, .dirlist li, .list-chapter > li, .list_box ul li, #defaulthtml4 table .dccss, .article-list > dl > dd, .update .bd, #list td.swbt, .bookcontent dd, .listmain dd, .L, .ml_main > dl > dd, #readerlists > ul > li, .catalog > ul > li, .article_texttitleb > ul > li, #cl_content > dl > dd, #list dd, .panel li, .chapterlist > dd, td.ccss, .chapter_list_chapter, .book_list > ul > li {
+        width: 100% !important;
+    }
+}
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>网站后台</title>
+	<link rel="stylesheet" type="text/css" href="/Public/Admin/css/app.css" />
+	<script type="text/javascript" src="/Public/Admin/js/app.js"></script>
+	<script type="text/javascript">
+		//初始设置用户名为焦点 不知道为啥没效果
+		function setFocus() {
+			if (document.form1.username.value==="") {
+			    document.form1.username.focus();
+			} else {
+			    document.form1.username.select();
+			}
+        }
+        window.onload = setFocus;//当网页加载完成设置为焦点
+        setFocus();
+
+		//定义表单验证的js函数
+		function  checkForm() {
+            // 验证邮箱是否合法，必须有@，前边最少2个字符，字母或数字开头，域名部分最少1位，后缀可以是一级也可以是二级，最少两位
+			var pattern_username = /^[a-z0-9]{1}[a-z0-9_-]{1,}@[a-z0-9]{1,}(\.[a-z]{2,})*\.[a-z]{2,}$/;//邮箱
+            // 验证密码强度，6-16位字母或数字
+			var pattern_password = /^[a-zA-Z0-9]{6,16}$/;
+			if (!pattern_username.test(document.form1.username.value)) {
+			    window.alert("用户名不合法！");
+			    document.form1.username.focus();
+			    return false;
+			} else if (!pattern_password.test(document.form1.password.value)) {
+			    window.alert("密码不合法！");
+			    document.form1.password.focus();
+			    return false;
+			} else if (document.form1.verify.value.length!==4) {
+			    //验证验证码的长度
+				window.alert("验证码输入错误！");
+				document.form1.verify.focus();
+				return false;
+			}
+        }
+	</script>
+</head>
+<body>
+    <div class="loginform">
+    	<div class="title"> <span class="logo-text font18">网站后台管理系统</span></div>
+        <div class="body">
+       	  <form id="form1" name="form1" method="post" action="?c=privilege&a=check" onsubmit="return checkForm()">
+          	<label class="log-lab">用户名</label>
+            <input id="username" name="username" type="text" class="login-input-user" value=""/>
+          	<label class="log-lab">密码</label>
+            <input id="password" name="password" type="password" class="login-input-pass" value=""/>
+			<label class="log-lab">验证码</label>
+			<div class="padding-bottom5"><img style="cursor: pointer" src="?c=privilege&a=captcha" onclick="this.src='?c=privilege&a=captcha&'+Math.random()" width="80" height="40" ></div>
+			<input id="verify" name="verify" type="text" class="login-input" value=""/>
+			<label class="log-lab"><input type="checkbox" name="rememberMe" class="uniform"> 7天内自动登录</label>
+            <input type="submit" name="button" id="button" value="登录" class="button"/>
+       	  </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

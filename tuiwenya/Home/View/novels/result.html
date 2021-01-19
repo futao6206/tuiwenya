@@ -1,0 +1,116 @@
+{%extends file="novels/main.html"%}
+
+{%block name="header"%}
+<title>{%$kw%} - 搜索结果 - tuiwenya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" href="/Public/Home/novels/css/result.css">
+<script>
+    function clear() {
+        var q = document.getElementById("q");
+        var btn = document.getElementById("d");
+        btn.style.display = "none";
+        q.value="";
+        q.focus();
+    }
+    function on_input(e){
+        var btn = document.getElementById("d");
+        var q = document.getElementById("q");
+        if (q.value=="") {
+            btn.style.display = "none";
+        } else {
+            btn.style.display = "inline";
+        }
+    }
+</script>
+{%/block%}
+
+{%block name="content"%}
+<div class="search-page">
+    <div class="search-container">
+        <form method="GET" action="" class="search_form" id="search_form" role="search">
+            <div class="clearfix" style="padding-bottom: 15px;">
+                <div class="logo-container">
+                    <div>
+                        <a href="https://tuiwenya.com/" class="link">
+                            <img src="/Public/Home/novels/img/logo_search_page.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="input-group search-container nofull">
+                        <input type="search" name="kw" class="form-control" id="q" placeholder="Search for..."
+                               autocomplete="off" value="{%$kw%}" oninput="on_input(event)" onporpertychange="on_input(event)">
+                        <a href="javascript:clear();"  class="delete" id="d" style="display: inline">x</a>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn">Start search</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="result-container">
+    <div class="col-sm-8">
+        <div class="aresult-header">
+            <div class="aresult-count">
+                {%$count%} 条结果（用时{%$time%}s）
+            </div>
+        </div>
+        <div class="default-container">
+            {%foreach $results as $result%}
+            <h4 class="result_header">
+                <a href="{%$result.url%}">
+                    {%$result.title%}
+                </a>
+            </h4>
+            <p class="result-content">
+                {%$result.content%}
+            </p>
+            <div class="">
+                <div class="pull-right">
+                    {%if $result.is_parse%}
+                    <span class="engine">已解析</span>
+                    {%else%}
+                    <span class="engine">未解析</span>
+                    {%/if%}
+                    {%if $result.is_recommend%}
+                    <span class="engine" style="color: #C80000">推荐</span>
+                    {%/if%}
+                </div>
+            </div>
+            <div class="external-link">
+                <span class="url">{%$result.netloc%}</span>
+                <span class="proxy">
+                    <a href="{%$result.url%}" class="text-info" target="_blank" rel="noopener noreferrer">查看源网址</a>
+                    <div class="tips">
+                        {%$result.url%}
+                    </div>
+                </span>
+            </div>
+            {%/foreach%}
+        </div>
+    </div>
+    <div class="col-sm-4" id="sidebar_results">
+        <div class="entro-panel panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">免费小说 在线阅读</h4>
+            </div>
+            <div class="panel-body entro-qr">
+                <a href="https://www.tuiwenya.com">
+                    <img src="/Public/Home/novels/img/qr_homesite.jpg" alt="">
+                </a>
+                <p class="name">推文鸭 - 给你最清新简洁的阅读体验 </p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+{%/block%}

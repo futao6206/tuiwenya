@@ -1,0 +1,30 @@
+<div id="sidebar">
+            <!-- start sidemenu -->
+            <div id="sidemenu">
+            	<ul>
+                	<li class="active"><a href="?c=index"><img src="/Public/Admin/img/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/>控制面板</a></li>
+                    <li class="subtitle">
+                    	<a class="action tips-right" href="#" title="小说管理"><img src="/Public/Admin/img/icons/sidemenu/mail.png" width="16" height="16" alt="icon"/>小说管理<img src="/Public/Admin/img/arrow-down.png" width="7" height="4" alt="arrow" class="arrow" /></a>
+                    	<ul class="submenu display-block">
+                        <li><a href="?c=novel&a=add"><img src="/Public/Admin/img/icons/sidemenu/file_add.png" width="16" height="16" alt="icon"/>添加小说</a></li>
+                        <li><a href="?c=novel"><img src="/Public/Admin/img/icons/sidemenu/file.png" width="16" height="16" alt="icon"/>小说列表</a></li>
+                        <li><a href="?c=novel&a=search"><img src="/Public/Admin/img/icons/sidemenu/magnify.png" width="16" height="16" alt="icon"/>搜索列表</a></li>
+                        </ul>
+                    </li>
+                    <!-- 小说管理 -->
+                  
+                    {%if $smarty.session.user.role%}
+                    <!-- 用户管理 -->
+                    <li class="subtitle">
+                        <a class="action tips-right" href="#" title="用户管理"><img src="/Public/Admin/img/icons/sidemenu/user.png" width="16" height="16" alt="icon"/>用户管理<img src="/Public/Admin/img/arrow-down.png" width="7" height="4" alt="arrow" class="arrow" /></a>
+                        <ul class="submenu display-block">
+                            <li><a href="?c=user&a=add"><img src="/Public/Admin/img/icons/sidemenu/user_add.png" width="16" height="16" alt="icon"/>添加用户</a></li>
+                            <li><a href="?c=user"><img src="/Public/Admin/img/icons/sidemenu/file.png" width="16" height="16" alt="icon"/>用户列表</a></li>
+                        </ul>
+                    </li>
+                    <!-- 用户管理 -->
+                    {%/if%}
+                </ul>
+            </div>
+            <!-- end sidemenu -->
+        </div>

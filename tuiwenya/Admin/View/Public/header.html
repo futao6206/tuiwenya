@@ -1,0 +1,30 @@
+<div id="header">
+    <!-- logo -->
+    <div class="logo">	<a href="?p=admin"><span class="logo-text text-center font18">小说后台</span></a>	</div>
+
+    <!-- notifications -->
+    <div id="notifications">
+        <div class="clear"></div>
+    </div>
+
+    <!-- quick menu -->
+<!--    <div id="quickmenu">-->
+<!--        <a href="?c=novel&a=add" class="qbutton-left tips" title="新增一篇小说"><img src="/Public/Admin/img/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>-->
+<!--        <a href="?c=index" class="qbutton-right tips" title="直达前台"><img src="/Public/Admin/img/icons/sidemenu/magnify.png" width="18" height="14" alt="new post" /></a>-->
+<!--        <div class="clear"></div>-->
+<!--    </div>-->
+
+    <!-- profile box -->
+    <div id="profilebox">
+        <a href="#" class="display">
+            <img src="/Public/Admin/img/simple-profile-img.png" width="33" height="33" alt="profile"/> <span>{%if $smarty.session.user.role%}管理员{%else%}用户{%/if%}</span> <b>昵称：{%$smarty.session.user.name%}</b>
+        </a>
+
+        <div class="profilemenu">
+            <ul>
+                <li><a href="?c=privilege&a=logout">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

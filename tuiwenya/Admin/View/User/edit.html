@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>小说后台</title>
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/app.css" />
+    <script type="text/javascript" src="/Public/Admin/js/app.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- START HEADER -->
+    {%include file='../Public/header.html'%}
+    <!-- END HEADER -->
+
+    <!-- START MAIN -->
+    <div id="main">
+        <!-- START SIDEBAR -->
+        {%include file="../Public/sidebar.html"%}
+        <!-- END SIDEBAR -->
+
+        <!-- START PAGE -->
+        <div id="page">
+            <!-- start page title -->
+            <div class="page-title">
+                <div class="in">
+                    <div class="titlebar">	<h2>用户管理</h2>	<p>编辑用户</p></div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- START CONTENT -->
+            <div class="content">
+                <div class="simplebox grid740" style="z-index: 720;">
+                    <div class="titleh" style="z-index: 710;">
+                        <h3>编辑用户</h3>
+                    </div>
+                    <div class="body" style="z-index: 690;">
+
+                        <form id="form2" name="form2" method="post" action="?c=user&a=edit&id={%$id%}">
+                            <div class="st-form-line" style="z-index: 680;">
+                                <span class="st-labeltext">昵称</span>
+                                <input name="name" type="text" class="st-forminput" style="width:33%" value="{%$user.name%}">
+                                <div class="clear" style="z-index: 670;"></div>
+                            </div>
+                            <div class="st-form-line" style="z-index: 680;">
+                                <span class="st-labeltext">角色</span>
+                                {%if $user.role%}
+                                <label class="margin-right10"><input type="radio" name="role" value="0" class="uniform"/> 普通用户</label>
+                                <label class="margin-right10"><input type="radio" name="role" value="1" checked class="uniform"/> 管理员</label>
+                                {%else%}
+                                <label class="margin-right10"><input type="radio" name="role" value="0" checked class="uniform"/> 普通用户</label>
+                                <label class="margin-right10"><input type="radio" name="role" value="1" class="uniform"/> 管理员</label>
+                                {%/if%}
+                                <div class="clear" style="z-index: 670;"></div>
+                            </div>
+
+                            <div class="st-form-line" style="z-index: 680;">
+                                <span class="st-labeltext">设置新密码(不设置请留空)</span>
+                                <input name="password" type="text" class="st-forminput" style="width:33%" value="">
+                                <div class="clear" style="z-index: 670;"></div>
+                            </div>
+
+                            <div class="button-box" style="z-index: 460;">
+                                <input type="submit" id="button" value="提交" class="st-button">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END PAGE -->
+        <div class="clear"></div>
+    </div>
+    <!-- END MAIN -->
+
+    <!-- START FOOTER -->
+    {%include file="../Public/footer.html"%}
+    <!-- END FOOTER -->
+</div>
+</body>
+</html>

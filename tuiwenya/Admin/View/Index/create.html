@@ -1,0 +1,31 @@
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/Public/Admin/css/typo.css" rel="stylesheet">
+    <link href="/Public/Admin/css/main.css" rel="stylesheet">
+<body>
+<div id="wrapper" class="typo typo-selection markdown-body ">
+    <h1 style="text-align:center">书单推荐</h1><br>
+    <h2 id="tagline" class="serif" style="text-align: right;">日期：2020-01-10</h2>
+
+    <p>
+    {%foreach $results as $result%}
+    《{%$result.title%}》
+    {%/foreach%}
+    </p>
+
+    {%foreach $results as $result%}
+    <h2 id="_1" style="color: #1abc9c;">
+        <a href="{%$result.url%}" target="_blank">{%$result.title%}</a>
+    </h2>
+    <p class="author">作者：{%$result.author%}</p>
+    <p>{%$result.introduce%}</p>
+    <hr>
+    {%/foreach%}
+    <p>小可爱们在公众号【桃子推文小站】中发送对应小说名字即可在线阅读喔~</p>
+</div>
+
+</body>
+</html>

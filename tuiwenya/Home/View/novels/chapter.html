@@ -1,0 +1,63 @@
+{%extends file="novels/main.html"%}
+
+{%block name="header"%}
+<title>{%$novel.title%} - tuiwenya</title>
+<link rel="stylesheet" href="/Public/Home/novels/css/chapter.css">
+{%/block%}
+
+{%block name="content"%}
+
+<div class="container all-chapter">
+    <div class="box_con">
+        <div id="maininfo">
+            <div id="info">
+                <h1>{%$novel.title%}</h1>
+                <p>作  者：{%$novel.author%}</p>
+            </div>
+        </div>
+    </div>
+    <div id="list">
+        <dl>
+            <dt>《{%$novel.title%}》正文</dt>
+            {%foreach $chapters as $chapter%}
+            <dd><a href="?c=content&n={%$chapter.novel_id%}&name={%$novel.title%}&ch={%$chapter.id%}&o={%$chapter.order_index%}&title={%$chapter.title%}" title="{%$chapter.title%}">{%$chapter.title%}</a></dd>
+            {%/foreach%}
+        </dl>
+    </div>
+    {%if $pageCount ne 1%}
+    <div class="pagebg">
+        <a href="?c=chapter&n={%$novel.id%}&name={%$novel.title%}&page={%$page_pre%}" class="btn-default pagebtn page_pre">上一页</a>
+        <button class="btn-default pagebtn page_center">{%$pages[$page-1]%}</button>
+        <a href="?c=chapter&n={%$novel.id%}&name={%$novel.title%}&page={%$page_next%}" class="btn-default pagebtn page_next">下一页</a>
+    </div>
+    <div class="sel" style="display: none">
+        <div class="ptm-alert-shade"></div>
+        <div class="pt-dir-sel" style="background-position: left 50px;">
+            <p class="title">请选择章节</p>
+            <ul>
+                {%for $i=0 to $pageCount-1%}
+                {%if $page-1 eq $i%}
+                <li  class="active"><a href="?c=chapter&n={%$novel.id%}&name={%$novel.title%}&page={%$i+1%}">{%$pages[$i]%}</a></li>
+                {%else%}
+                <li><a href="?c=chapter&n={%$novel.id%}&name={%$novel.title%}&page={%$i+1%}">{%$pages[$i]%}</a></li>
+                {%/if%}
+                {%/for%}
+            </ul>
+        </div>
+    </div>
+    {%/if%}
+    <script type="text/javascript">
+        var clickBtn = document.getElementsByClassName('page_center')[0];
+        var list = document.getElementsByClassName('sel')[0];
+        var clickShade = document.getElementsByClassName('ptm-alert-shade')[0];
+
+        clickBtn.addEventListener('click',function () {
+            list.style.display = 'block';
+        })
+
+        clickShade.addEventListener('click',function(){
+            list.style.display = 'none';
+        })
+    </script>
+</div>
+{%/block%}

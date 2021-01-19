@@ -1,0 +1,412 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+body a {
+    color: #177cb0
+}
+
+.search-page {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #F4F4F4;
+    padding: 0 80px 0 80px
+}
+
+
+.search_form {
+    padding-top: 35px
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#search_form .input-group-btn {
+    width: 65px;
+    position: absolute;
+    top: 0;
+    z-index: 100
+}
+
+#search_form .input-group-btn .btn {
+    width: 100%;
+    height: 45px;
+    color: #000;
+    outline: 0;
+    text-indent: -9999px;
+    background: url(/Public/Home/novels/img/search_ic.png) no-repeat center center;
+    background-size: 20px 20px
+}
+
+#search_form .input-group-btn .btn:hover {
+    background: url(/Public/Home/novels/img/search_ic_pressed.png) no-repeat center center;
+    background-size: 20px 20px
+}
+
+#search_form .logo-container {
+    margin-left: -40px;
+    padding-right: 10px;
+    float: left
+}
+
+#search_form .logo-container > div {
+    position: relative
+}
+
+#search_form .logo-container .link {
+    display: block;
+    width: 40px;
+    position: absolute;
+    top: 2px;
+    z-index: 100;
+    left: -4%
+}
+
+#search_form .logo-container img {
+    max-width: 100%
+}
+search-container
+
+#search_form . {
+    position: relative;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search_form .search-container.nofull {
+    width: 630px;
+    padding-left: 0;
+    margin-left: 0
+}
+
+#search_form .search-container.nofull .input-group-btn {
+    right: 1px
+}
+
+#search_form .search-container .delete {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 17px;
+    right: 70px;
+    text-indent: -9999px;
+    z-index: 1000;
+    background: url(/Public/Home/novels/img/delete.png) 0 0 / contain no-repeat;
+    display: inline;
+}
+
+.col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 100%;
+}
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.clearfix :after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.highlight {
+    background: #f8f8f8;
+    font-weight: 700
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+h2, h4 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit
+}
+
+.search-page {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #FEFFFE;
+    padding: 0
+}
+
+#search_form .logo-container {
+    margin-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    top: 14px;
+    left: 12px;
+    z-index: 300
+}
+
+#search_form .logo-container > div {
+    position: relative
+}
+
+#search_form .logo-container .link {
+    display: block;
+    width: 36px;
+    position: absolute;
+    top: 9px;
+    z-index: 100;
+    left: 1px
+}
+
+#search_form .logo-container img {
+    width: 80%;
+    max-width: 100%
+}
+
+#search_form .search-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#search_form .search-container.nofull {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#q {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    box-shadow: 1px 1px 6px 0 rgba(119, 119, 119, .5);
+    border: 0;
+    border-radius: 25px !important;
+    padding-left: 20px;
+    padding-right: 100px;
+    box-sizing: border-box
+}
+
+#q:focus {
+    outline: 0
+}
+
+#q::-webkit-input-placeholder {
+    color: #bcbcbc
+}
+
+.logo {
+    text-align: center;
+    padding-top: 24%;
+}
+
+@media (min-width: 620px) {
+    .logo {
+        padding-top: 10%;
+    }
+    .search_form  {
+        width: 620px;
+        margin: 0 auto;
+        text-align: left
+    }
+}
+
+.indexNavBlock {
+    max-width: 620px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 30px 10px 0
+}
+
+.indexNavBlock .searchBlock {
+    margin: 0;
+    width: 100%;
+    border-radius: 4px
+}
+
+.hot {
+    width: 100%;
+    background: #fff;
+    text-align: left;
+    float: left;
+    margin: 0 auto;
+    padding: 20px
+}
+
+.hot li, .hot p, .hot ul {
+    margin: 0;
+    padding: 0
+}
+
+.hot li:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 34, 77, .1)
+}
+
+.hot ul {
+    margin: 10px -2% 0 -1%
+}
+
+.hot li {
+    font-size: 13px;
+    line-height: 1;
+    display: block;
+    float: left;
+    width: 48%;
+    margin: 5px 1%;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(0, 34, 77, .1);
+    text-align: center;
+    padding: 10px 0;
+    color: #222;
+    height: 33px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.border-shadow {
+    box-shadow: 0 8px 33px 0 rgba(30, 35, 42, .08);
+    border-radius: 8px;
+    background: #fff
+}
+
+
+.blockTitleShadow {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 1px 6px 1px 8px;
+    margin: 4px 0 0 3px
+}
+
+.blockTitleShadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    background: rgba(219, 84, 47, .4);
+    transform: skew(-10deg);
+    border-radius: 2px;
+    margin-left: 3px
+}
+
+
+.blockTitle {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 1px 6px 1px 8px
+}
+
+.blockTitle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #db542f;
+    transform: skew(-10deg);
+    border-radius: 2px;
+    margin-left: 3px
+}
+
+.blockTitleShadow {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 1px 6px 1px 8px;
+    margin: 4px 0 0 3px
+}
+
+.blockTitleShadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    background: rgba(219, 84, 47, .4);
+    transform: skew(-10deg);
+    border-radius: 2px;
+    margin-left: 3px
+}
+
