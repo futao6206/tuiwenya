@@ -14,3 +14,15 @@
 3、将代码上传至服务器即可使用
 
 ### Screenshots
+
+首页：
+
+![https://github.com/futao6206/tuiwenya/blob/master/chapter.jpg](https://github.com/futao6206/tuiwenya/blob/master/home.jpg)
+
+目录：
+
+![tuiwenya/chapter.jpg at master · futao6206/tuiwenya · GitHub](https://github.com/futao6206/tuiwenya/blob/master/chapter.jpg)
+
+内容
+
+![tuiwenya/content.jpg at master · futao6206/tuiwenya · GitHub](https://github.com/futao6206/tuiwenya/blob/master/content.jpg)
