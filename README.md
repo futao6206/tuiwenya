@@ -12,3 +12,5 @@
 2、在`/Admin/Conf/Config.php`以及`/Home/Conf/Config.php`路径下配置自己的数据库
 
 3、将代码上传至服务器即可使用
+
+### Screenshots
