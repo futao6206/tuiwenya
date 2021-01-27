@@ -3,6 +3,7 @@
 `tuiwenya`是一个带有后台小说管理系统以及小说搜索爬虫的在线小说网站，创建tuiwenya目的是为了让小伙伴可以更方便的找小说看，另外作为一个学习PHP的练手项目。
 
 - 演示网址：https://tuiwenya.com
+- 安装文档：https://devfutao.com/archives/227/
 - 公众号：桃子推文小站
 
 #### Installation
